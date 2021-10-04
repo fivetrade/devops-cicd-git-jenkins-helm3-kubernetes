@@ -8,7 +8,7 @@ sudo apt install openjdk-8-jdk
 
 2. Verify Java Installation
 ```sh 
-java --version 
+java -version 
 ```
 
 3. Setup JAVA_HOME 
