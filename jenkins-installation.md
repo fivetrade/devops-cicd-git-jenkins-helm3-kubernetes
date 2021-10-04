@@ -2,7 +2,8 @@
 ### Java Installation
 1. Install Java
 ```sh
-sudo apt install openjdk-8-jdk openjdk-8-jre 
+sudo apt update
+sudo apt install openjdk-8-jdk
 ```
 
 2. Verify Java Installation
