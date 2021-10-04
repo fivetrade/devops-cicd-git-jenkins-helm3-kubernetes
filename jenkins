@@ -1,3 +1,3 @@
-<h1>Jenkins server Installation</h1>
-<h3>Install Java</h3>
-sudo apt install openjdk-8-jdk openjdk-8-jre
+# Jenkins server Installation
+### Install Java
+``` sudo apt install openjdk-8-jdk openjdk-8-jre ```
