@@ -14,7 +14,7 @@ java -version
 3. Setup JAVA_HOME 
 Find the java path
 ```sh
-Find /usr/lib/jvm/java-1.8.*
+find /usr/lib/jvm/java-1.8.*
 sudo vim /etc/profile.d/environment.sh
 ```
 Create an environment.sh file and set the export JAVA_HOME
