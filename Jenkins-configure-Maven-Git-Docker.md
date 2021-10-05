@@ -1,7 +1,6 @@
 # Install and configure Maven, Git and Docker in jenkins 
 ### Installing Apache Maven on Ubuntu 20.04 with apt
-1. Install Maven : https://maven.apache.org/download.cgi
-Download & install maven
+1. Download & install maven : https://maven.apache.org/download.cgi
 ```sh
 mkdir /home/jenkins/tools
 cd /home/jenkins/tools
