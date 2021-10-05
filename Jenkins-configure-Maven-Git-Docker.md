@@ -5,8 +5,8 @@
 mkdir /home/jenkins/tools
 cd /home/jenkins/tools
 wget https://dlcdn.apache.org/maven/maven-3/3.8.3/binaries/apache-maven-3.8.3-bin.tar.gz
-tar -xvzf apache-maven-3.8.2-bin.tar.gz
-mv apache-maven-3.8.2 mvn
+tar -xvzf apache-maven-3.8.3-bin.tar.gz
+mv apache-maven-3.8.3 mvn
 sudo vim /etc/profile.d/environment.sh
 ```
 2. Export environment variables
