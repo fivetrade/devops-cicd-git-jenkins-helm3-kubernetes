@@ -46,32 +46,25 @@ lsb-release
 2.	Add Docker’s official GPG key
 ```sh
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
-echo \
-  "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
-  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 ```
-3.	Enable docker in boot
-```sh
-systemctl enable docker
-```
-4.	Enable docker in boot
-```sh
-systemctl enable docker
-```
-5. Chedk docker version
-```sh
-docker --version
-```
-6. Install Docker Engine
+3. Install Docker Engine
 ```sh
 sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io
 ```
-7. Verify that Docker Engine is installed correctly by running the hello-world image.
+4. Verify that Docker Engine is installed correctly by running the hello-world image.
 ```sh
 sudo docker run hello-world
 ```
-8. Give permissions to jenkins user in jenkins server to access docker
+5.	Enable docker in boot
+```sh
+systemctl enable docker
+```
+6.	Docker version
+```sh
+docker --version
+```
+7. Give permissions to jenkins user in jenkins server to access docker
 ```sh
 sudo groupadd docker
 sudo usermod -aG docker jenkins
