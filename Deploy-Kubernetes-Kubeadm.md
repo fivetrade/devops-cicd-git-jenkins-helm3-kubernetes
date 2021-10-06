@@ -9,11 +9,11 @@ This documentation guides you in setting up a kubernetes cluster on __Ubuntu 20.
 | worker2 | 192.168.1. | Ubuntu 20.04 | 2G | 2 |
 
 ## Step1 - On master and workers
-### Login as root user 
+#### Login as root user 
 ```
 sudo su -
 ```
-### Disable Firewall 
+#### Disable Firewall 
 ```
 ufw disable
 ```
@@ -29,7 +29,7 @@ net.bridge.bridge-nf-call-iptables = 1
 EOF
 sysctl --system
 ```
-#### Install docker engine
+####Install docker engine
 ```
   apt install -y apt-transport-https ca-certificates curl gnupg-agent software-properties-common
   curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
@@ -47,3 +47,39 @@ sysctl --system
 ```
 apt update && apt install -y kubeadm=1.18.5-00 kubelet=1.18.5-00 kubectl=1.18.5-00
 ```
+## Step2 - On master only
+##### Initialize Kubernetes Cluster
+Update the command with the ip address of master
+```
+kubeadm init --apiserver-advertise-address=172.16.16.100 --pod-network-cidr=192.168.0.0/16  --ignore-preflight-errors=all
+```
+##### Deploy Calico network
+```
+kubectl --kubeconfig=/etc/kubernetes/admin.conf create -f https://docs.projectcalico.org/v3.14/manifests/calico.yaml
+```
+
+##### Cluster join command (don't forget to save output)
+```
+kubeadm token create --print-join-command
+```
+##### To be able to run kubectl commands as non-root user
+If you want to be able to run kubectl commands as non-root user, then as a non-root user perform these
+```
+mkdir -p $HOME/.kube
+sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+sudo chown $(id -u):$(id -g) $HOME/.kube/config
+```
+## On Kworkers (worker01 & worker02)
+##### Join the cluster
+Use the output from __kubeadm token create__  command (saved output) in previous step from the master server and run here.
+
+## Verifying the cluster (On master)
+##### Get Nodes status
+```
+kubectl get nodes
+```
+##### Get component status
+```
+kubectl get cs
+```
+Winner :)
