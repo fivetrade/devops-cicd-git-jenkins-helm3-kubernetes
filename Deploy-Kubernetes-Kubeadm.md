@@ -13,6 +13,25 @@ This documentation guides you in setting up a kubernetes cluster on __Ubuntu 20.
 ```
 sudo su -
 ```
+#### Update hostnames
+##### Change hostname to master
+```
+vi /etc/hostname
+reboot
+```
+##### Change hostname to worker1
+```
+vi /etc/hostname
+reboot
+```
+##### Change hostname to worker2
+```
+vi /etc/hostname
+reboot
+```
+ 
+
+
 #### Disable Firewall 
 ```
 ufw disable
