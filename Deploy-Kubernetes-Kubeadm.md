@@ -69,11 +69,11 @@ mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ```
-## On Kworkers (worker01 & worker02)
+## Step3 - On Kworkers (worker01 & worker02)
 ##### Join the cluster
 Use the output from __kubeadm token create__  command (saved output) in previous step from the master server and run here.
 
-## Verifying the cluster (On master)
+## Step4 - Verifying the cluster (On master)
 ##### Get Nodes status
 ```
 kubectl get nodes
