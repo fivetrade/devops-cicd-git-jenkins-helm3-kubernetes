@@ -1,6 +1,7 @@
 # Deploy Kubernetes Cluster with Kubeadm  
 This documentation guides you in setting up a kubernetes cluster on __Ubuntu 20.04 LTS__ with one master node and two workers nodes.
-
+##  What is Kubeadm ?
+Kubeadm is a tool built to provide best-practice "fast paths" for creating Kubernetes clusters. It performs the actions necessary to get a minimum viable, secure cluster up and running in a user friendly way. Kubeadm's scope is limited to the local node filesystem and the Kubernetes API, and it is intended to be a composable building block of higher level tools.
 ## Requirements
 | Role |Ram  | CPU |
 | --- | --- | --- |
