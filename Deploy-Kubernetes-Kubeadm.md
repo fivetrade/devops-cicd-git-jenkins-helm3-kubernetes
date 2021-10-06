@@ -3,7 +3,7 @@ This documentation guides you in setting up a kubernetes cluster on __Ubuntu 20.
 
 ## Requirements
 | Role |Ram  | CPU |
-| --- | --- | --- | --- | --- |
+| --- | --- | --- |
 | Master | 4G | 2 |
 | worker1 | 2G | 2 |
 | worker2 | 2G | 2 |
