@@ -13,8 +13,8 @@ This documentation guides you in setting up a kubernetes cluster on __Ubuntu 20.
 ```
 sudo su -
 ```
-##### Disable Firewall
+#### Disable Firewall
 ```
 ufw disable
 ```
- * Firewall stopped and disabled on system startup
+
