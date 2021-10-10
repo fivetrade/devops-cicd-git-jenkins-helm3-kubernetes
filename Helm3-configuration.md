@@ -1,4 +1,4 @@
-# Installation et configurationde Helm3 in jankins server
+# Install and Use Helm 3 on Kubernetes Cluster and jankins server
 ## Helm2 vs Helm3
 #### Tiller is Removed
 The most apparent change is the removal of Tiller. The server-side component, Tiller, is now removed.
