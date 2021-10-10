@@ -32,12 +32,14 @@ su - jenkins
 #### Download Helm 3 installation script.
 ```
 curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
+```
 Give the script execute permissions.
+```
 chmod 700 get_helm.sh
 ```
 #### Run the installer.
 ```
-$ ./get_helm.sh
+./get_helm.sh
 ```
 ####  Install a specific version
 ```
