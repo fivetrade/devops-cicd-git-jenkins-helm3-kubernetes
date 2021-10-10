@@ -28,7 +28,7 @@ jenkins ALL=(ALL) NOPASSWD: ALL
 ```
 su - jenkins
 ```
-## Step 1: Install Helm 3 on Linux | macOS
+## Install Helm 3 on Linux | macOS
 #### Download Helm 3 installation script.
 ```
 curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
