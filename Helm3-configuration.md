@@ -50,6 +50,7 @@ chmod 700 get_helm.sh
 helm version
 ```
 ## Step 3: Add Helm Chart repository
+#### Install of Helm 3 ** ON Jenkins Master (kubernetes cluster)
 After install Helm try to add a chart repository. Add official charts repository, In our case we’ll add bitnami repository.
 ```
 helm repo add bitnami https://charts.bitnami.com/bitnami
@@ -64,8 +65,9 @@ kubectl config get-contexts
 ````
 Switch to desired cluster context
 ````
-kubectl config use-context context-neme
+kubectl config use-context context-name
 ````
+#### Repo Helm 3 update ** ON Jenkins Server
 Got an update 
 ````
 helm repo update
