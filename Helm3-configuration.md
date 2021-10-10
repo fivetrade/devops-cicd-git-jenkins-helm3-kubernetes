@@ -11,7 +11,7 @@ example
 | Download a chart to your local directory	| fetch	| pull |
 | Given a release name, delete the release from Kubernetes | delete| uninstall |
 
-## Add Jenkins user into sudoers file to get sudo access
+## Step1 : Add Jenkins user into sudoers file to get sudo access
 #### Login as root user
 ```
 sudo su -
@@ -28,7 +28,7 @@ jenkins ALL=(ALL) NOPASSWD: ALL
 ```
 su - jenkins
 ```
-## Install Helm 3 on Linux | macOS
+## Step2 : Install Helm 3 on Linux | macOS
 #### Download Helm 3 installation script.
 ```
 curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
@@ -49,5 +49,33 @@ chmod 700 get_helm.sh
 ```
 helm version
 ```
+## Step 3: Add Helm Chart repository
+After install Helm try to add a chart repository. Add official charts repository, In our case we’ll add bitnami repository.
+```
+helm repo add bitnami https://charts.bitnami.com/bitnami
+````
+You will then be able to list the charts that can be installed
+```
+helm search repo stable
+````
+Listing charts in the bitnami repository
+````
+helm search repo bitnami
+````
+Confirm that your Kubernetes CLI is using the right cluster context by first listing the available contexts.
+````
+kubectl config get-contexts
+````
+Switch to desired cluster context
+````
+kubectl config use-context context-neme
+````
+Got an update 
+````
+helm repo update
+````
+
+
+
 
 
