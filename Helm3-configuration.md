@@ -54,10 +54,6 @@ After install Helm try to add a chart repository. Add official charts repository
 ```
 helm repo add bitnami https://charts.bitnami.com/bitnami
 ````
-You will then be able to list the charts that can be installed
-```
-helm search repo stable
-````
 Listing charts in the bitnami repository
 ````
 helm search repo bitnami
