@@ -50,7 +50,7 @@ chmod 700 get_helm.sh
 helm version
 ```
 ## Step 3: Add Helm Chart repository
-#### Add Helm 3 ** ON jenkins server
+#### Add Helm 3 ** ON Jenkins server
 After install Helm try to add a chart repository. Add official charts repository, In our case we’ll add bitnami repository.
 ```
 helm repo add bitnami https://charts.bitnami.com/bitnami
