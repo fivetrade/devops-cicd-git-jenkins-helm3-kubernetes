@@ -11,7 +11,7 @@ helm
 
 #### Show repo list 
 ```
-Helm repo list
+helm repo list
 ```
 
 #### Search repo Nginx
@@ -26,6 +26,6 @@ helm show chart bitnami/nginx-ingress-controller
 
 #### Install Ngix Ingress Controller
 ```
-helm install bitnami/nginx-ingress-controller
+helm install ingress-controller bitnami/nginx-ingress-controller
 ```
 
